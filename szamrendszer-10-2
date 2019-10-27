@@ -1,0 +1,25 @@
+     Console.Write("Add meg az átváltandó számot:");
+            double tizes = int.Parse(Console.ReadLine());
+
+            double maradek;
+            string kettes="";
+
+            do
+            {
+                maradek = tizes % 2;
+                tizes = Math.Truncate(tizes / 2);
+                Console.Write(maradek);
+                kettes= string.Concat(kettes,  maradek.ToString());
+            } while (tizes!=0);
+
+            Console.WriteLine();
+            //Console.WriteLine("Elso kod: " + kettes);
+
+            Console.WriteLine("Kettes szamrendszer:");
+            //Console.WriteLine(kettes[3]);
+            
+            for (int i = kettes.Length-1; i >= 0; i--)
+            {
+                Console.Write(kettes[i]);
+            }
+            
