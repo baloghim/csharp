@@ -1,0 +1,54 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace trycatch
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double a = 0;
+            double b = 0;
+
+            try
+
+            { 
+            Console.Write("Kérem a számláló értékét: ");
+            a = int.Parse(Console.ReadLine());
+
+            Console.Write("Kérem a nevező értékét: ");
+            b = int.Parse(Console.ReadLine());
+            }
+
+            catch (Exception)
+
+            {
+                Console.WriteLine("Rossz adat!");
+            }
+
+
+            double hanyados = 0;
+
+            try
+            {
+                hanyados = (a / b);
+                hanyados = Math.Round(hanyados, 3);
+                Console.WriteLine("Hányados: {0}", hanyados);
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("HIBA!");
+            }
+            finally
+            {
+                Console.WriteLine("Végül ez a blokk lefut.");
+            }
+
+            
+            Console.ReadKey();
+        }
+    }
+}
