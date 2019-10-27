@@ -1,0 +1,71 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace atvaltouj
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Console.Write("Add meg az átváltandó számot:");
+            double tizes = int.Parse(Console.ReadLine());
+
+            double maradek;
+            string tizenhatos = "";
+
+            do
+            {
+                maradek = tizes % 16;
+                tizes = Math.Truncate(tizes / 16);
+                Console.Write(maradek);
+                switch (maradek)
+                {
+                    case 10:
+                        tizenhatos = string.Concat(tizenhatos, 'A');
+                        break;
+
+                        case 11:
+                        tizenhatos = string.Concat(tizenhatos, 'B');
+                        break;
+
+                        case 12:
+                        tizenhatos = string.Concat(tizenhatos, 'C');
+                        break;
+
+                        case 13:
+                        tizenhatos = string.Concat(tizenhatos, 'D');
+                        break;
+    
+                        case 14:
+                        tizenhatos = string.Concat(tizenhatos, 'E');
+                        break;
+
+                        case 15:
+                        tizenhatos = string.Concat(tizenhatos, 'F');
+                        break;
+
+                        default:
+                        tizenhatos = string.Concat(tizenhatos, maradek.ToString());
+                        break;
+                }
+            } while (tizes != 0);
+
+            Console.WriteLine();
+            //Console.WriteLine("Elso kod: " + tizenhatos);
+
+            Console.WriteLine("tizenhatos szamrendszer:");
+            //Console.WriteLine(tizenhatos[3]);
+
+            for (int i = tizenhatos.Length - 1; i >= 0; i--)
+            {
+                Console.Write(tizenhatos[i]);
+            }
+            Console.ReadKey();
+
+        }
+    }
+}
