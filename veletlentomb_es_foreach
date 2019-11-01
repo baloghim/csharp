@@ -1,0 +1,25 @@
+     Random veletlen = new Random();
+
+            byte[] szamok = new byte[10];
+
+            veletlen.NextBytes(szamok);
+
+            foreach (byte item in szamok)
+            {
+                Console.WriteLine(item);
+            }
+
+
+            string[] szinek = new string[4];
+
+            szinek[0] = "lila";
+            szinek[1] = "kék";
+            szinek[3] = "sárga";
+
+            foreach(string szin in szinek)
+            {
+                Console.WriteLine(szin);
+            }
+
+
+            Console.ReadKey();
