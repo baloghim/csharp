@@ -1,0 +1,16 @@
+ Console.Write("Az első hány szám összegét szeretné: ");
+            int db = int.Parse(Console.ReadLine());
+
+            int i = 1;
+            int osszeg = 0;
+
+            while (i<=db)
+            {
+                osszeg += i;
+                Console.WriteLine(i + " hozzádása után az összeg: " + osszeg);
+                i++;
+            }
+
+            Console.WriteLine(osszeg);
+
+            Console.ReadKey();
