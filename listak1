@@ -1,0 +1,40 @@
+List<int> szamok = new List<int>();
+
+            Console.WriteLine("INT lista");
+
+            for (int i=0; i<5; i++)
+            {
+                Console.Write(i + ". elem: ");
+                int szam = int.Parse(Console.ReadLine());
+                szamok.Add(szam);
+            }
+
+            Console.WriteLine();
+
+            foreach(int elem in szamok)
+            {
+                Console.WriteLine(elem);
+            }
+
+
+
+            List<string> nevek = new List<string>();
+
+            Console.WriteLine("STRING lista");
+
+            for (int i = 0; i < 5; i++)
+            {
+                Console.Write(i + ". nev: ");
+                string nev = Console.ReadLine();
+                nevek.Add(nev);
+            }
+
+            Console.WriteLine();
+
+            for (int i=0; i<nevek.Count; i++)
+            {
+                Console.WriteLine(nevek[i]);
+            }
+
+
+            Console.ReadKey();
